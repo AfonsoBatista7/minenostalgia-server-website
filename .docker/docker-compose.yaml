@@ -1,13 +1,24 @@
 services:
   # Application
-  app:
-    image: app:1.2.3
+  backend:
+    image: app-backend:latest
+    build:
+      context: ../source/App.Backend
     ports:
     - "5000:5000"
     environment:
     - dbconnection=mongodb://mongodb:27017
     depends_on:
     - mongodb
+
+  frontend:
+    image: app-frontend:latest
+    build:
+      context: ../source/App.Frontend
+    ports:
+      - "3000:80"
+    depends_on:
+    - backend
 
   # Sample database service
   mongodb:
