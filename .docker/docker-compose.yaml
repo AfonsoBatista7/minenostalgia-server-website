@@ -1,7 +1,7 @@
 services:
   # Application
   backend:
-    image: app-backend:latest
+    image: backend-app:latest
     build:
       context: ../source/App.Backend
     ports:
@@ -12,7 +12,7 @@ services:
     - mongodb
 
   frontend:
-    image: app-frontend:latest
+    image: frontend-app:latest
     build:
       context: ../source/App.Frontend
     ports:

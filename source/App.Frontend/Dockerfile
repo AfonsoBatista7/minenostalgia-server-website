@@ -22,8 +22,12 @@ FROM nginx:alpine
 # Copy the build output to Nginx's serving directory
 COPY --from=build /app/build /usr/share/nginx/html
 
+# Copy custom Nginx configuration
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 # Expose the port Nginx runs on
 EXPOSE 80
 
 # Start Nginx (default command)
-CMD ["nginx", "-g", "daemon off;"]
+# CMD ["nginx", "-g", "daemon off;"]
+CMD ["npm" "start"]
