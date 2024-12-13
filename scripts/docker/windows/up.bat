@@ -17,4 +17,4 @@ if "%~1"=="" (
 
 :endloop
 :: Run Docker Compose with specified profiles
-docker compose %profiles% -f ..\..\..\.docker\docker-compose.yaml up -d
+docker compose %profiles% -f ..\..\..\.docker\docker-compose.yaml up -d --build
