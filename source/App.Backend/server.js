@@ -24,17 +24,29 @@ mongoose.connect(process.env.MONGODB_TOKEN)
 });
 
 // Endpoint to get player stats by name
-app.get('/stats/player/:name', async (req, res) => {
+app.get('/stats/:name', async (req, res) => {
     const playerName = req.params.name;
 
     try {
         const playerStatsData = await playerStats.findOne({ name: playerName });
 
-        if (!playerStatsData) {
-            return res.status(404).json({ message: 'Player not found' });
-        }
+        if (!playerStatsData) return res.status(404).json({ message: 'Player not found' });
 
         res.json(playerStatsData);
+    } catch (err) {
+        console.error('Error retrieving player stats:', err);
+        res.status(500).json({ message: 'Server error' });
+    }
+});
+
+app.get('/stats', async (req, res) => {
+
+    try {
+        const playerNames = await playerStats.find().select('name online lastLogin timePlayed link');
+
+        if (!playerNames) return res.status(404).json({ message: 'No Players available' });
+
+        res.json(playerNames);
     } catch (err) {
         console.error('Error retrieving player stats:', err);
         res.status(500).json({ message: 'Server error' });

@@ -7,7 +7,7 @@ const PlayerStats = ({ playerName }) => {
     useEffect(() => {
         const fetchPlayerData = async () => {
             try{
-                const response = await fetch(`http://localhost:5000/stats/player/${playerName}`);
+                const response = await fetch(`http://localhost:5000/stats/${playerName}`);
                 const data = await response.json();
 
                   if (response.ok)
