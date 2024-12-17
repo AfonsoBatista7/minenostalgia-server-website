@@ -39,7 +39,7 @@ app.get('/stats/:name', async (req, res) => {
     }
 });
 
-app.get('/stats', async (req, res) => {
+app.get('/players', async (req, res) => {
 
     try {
         const playerNames = await playerStats.find().select('name online lastLogin timePlayed link');
