@@ -47,7 +47,7 @@ const PlayerStats = ({ playerName }) => {
         <div>
           {stats.map((stat, index) => (
             <div key={index} style={{ marginBottom: '10px' }}>
-              <strong>{stat.name}:</strong> {stat.value || 'N/A'}
+                <strong>{stat.name}:</strong> {stat.value || 0}
             </div>
           ))}
         </div>
