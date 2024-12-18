@@ -42,7 +42,7 @@ app.get('/stats/:name', async (req, res) => {
 app.get('/players', async (req, res) => {
 
     try {
-        const playerNames = await playerStats.find().select('name online lastLogin timePlayed link');
+        const playerNames = await playerStats.find().select('name online lastLogin timePlayed');
 
         if (!playerNames) return res.status(404).json({ message: 'No Players available' });
 

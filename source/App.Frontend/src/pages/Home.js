@@ -1,4 +1,6 @@
 import style from "./home.module.css";
+import ServerStats from "../components/stats/ServerStats";
+import PlayerSmallStats from "../components/stats/PlayerSmallStats";
 
 const Home = () => {
   return (
@@ -14,6 +16,9 @@ const Home = () => {
         <p>Have a trip down memory lane</p>
         <p>and travel to the past versions of minecraft</p>
       </div>
+
+      <ServerStats/>
+      <PlayerSmallStats/>
     </>
   );
 }

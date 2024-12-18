@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const PlayerStats = () => {
 
@@ -23,7 +24,7 @@ const PlayerStats = () => {
     }, [])
 
     const convertTimePlayedToMinutes = (timePlayed) => {
-        const hoursMatch = timePlayed.match(/(\d+)\s*Hr/);
+        const hoursMatch = timePlayed.match(/(\d+)\s*Hr/) || timePlayed.match(/(\d+)\s*Hours/);
         const minutesMatch = timePlayed.match(/(\d+)\s*Min/);
 
         const hours = hoursMatch ? parseInt(hoursMatch[1], 10) : 0;
@@ -57,10 +58,12 @@ const PlayerStats = () => {
             {
                 onlinePlayers.length > 0 ? (
                     onlinePlayers.map((player,index) => (
-                        <div key={index} style={{ marginBottom: '10px' }}>
-                          <strong>{player.name}</strong> 
-                          {player.online ? '🟢' : '🔴'}
-                        </div>
+                        <Link to={`/stats/${player.name}`} key={index} style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <div key={index} style={{ marginBottom: '10px' }}>
+                              <strong>{player.name}</strong> 
+                              {player.online ? '🟢' : '🔴'}
+                            </div>
+                        </Link>
                     ))) : (
                         <p>No online players.</p>
                     )
@@ -70,11 +73,14 @@ const PlayerStats = () => {
             {
                 offlinePlayers.length > 0 ? (
                     offlinePlayers.map((player,index) => (
-                        <div key={index} style={{ marginBottom: '10px' }}>
-                          <strong>{player.name}</strong> 
-                          Last seen... {player.lastLogin}
-                          {player.online ? '🟢' : '🔴'}
-                        </div>
+
+                        <Link to={`/stats/${player.name}`} key={index} style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <div key={index} style={{ marginBottom: '10px' }}>
+                              <strong>{player.name}</strong> 
+                              {player.online ? '🟢' : '🔴'}
+                              <p> Last seen... {player.lastLogin} </p>
+                            </div>
+                        </Link>
                     ))) : (
                         <p>No offlinePlayers players.</p>
                     )
