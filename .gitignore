@@ -10,6 +10,8 @@
 *.userosscache
 *.sln.docstates
 
+source/MongoDB/mongo-data/
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

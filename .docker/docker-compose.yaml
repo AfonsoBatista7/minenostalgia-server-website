@@ -25,13 +25,20 @@ services:
     build:
       context: ../source/MongoDB
     restart: unless-stopped
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: RageCraft
-      MONGO_INITDB_ROOT_PASSWORD: minenostalgia7!
+    env_file: .env
     ports:
     - "27017:27017"
     volumes:
     - ../source/MongoDB/mongo-data:/data/db
+
+  mongo-populator:
+    build:
+      context: ../source/MongoDB/data
+    restart: no
+    env_file: .env
+    command: ["sh", "./populateDb.sh", "${MONGO_INITDB_ROOT_USERNAME}", "${MONGO_INITDB_ROOT_PASSWORD}", "${MONGO_HOST}", "${MONGO_PORT}", "${DUMP_DIR}"]
+    depends_on:
+    - mongodb
 
 volumes:
   mongo-data:
