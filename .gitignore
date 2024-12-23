@@ -10,6 +10,8 @@
 *.userosscache
 *.sln.docstates
 
+source/MongoDB/mongo-data/
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
@@ -97,6 +99,14 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
+
+# misc
+**/..DS_Store
+**/..env.local
+**/..env.development.local
+**/..env.test.local
+**/..env.production.local
+**/.env
 
 # Chutzpah Test files
 _Chutzpah*

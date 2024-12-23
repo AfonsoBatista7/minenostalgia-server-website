@@ -1,22 +1,44 @@
 services:
   # Application
-  app:
-    image: app:1.2.3
+  backend:
+    image: backend-app:latest
+    build:
+      context: ../source/App.Backend
     ports:
     - "5000:5000"
     environment:
     - dbconnection=mongodb://mongodb:27017
     depends_on:
-    - mongodb
+    - mongo-populator
+
+  frontend:
+    image: frontend-app:latest
+    build:
+      context: ../source/App.Frontend
+    ports:
+      - "3000:80"
+    depends_on:
+    - backend
 
   # Sample database service
   mongodb:
-    image: mongo:7
+    build:
+      context: ../source/MongoDB
     restart: unless-stopped
+    env_file: .env
     ports:
     - "27017:27017"
     volumes:
-    - mongo-data:/data/db
+    - ../source/MongoDB/mongo-data:/data/db
+
+  mongo-populator:
+    build:
+      context: ../source/MongoDB/data
+    restart: no
+    env_file: .env
+    command: ["sh", "./populateDb.sh", "${MONGO_INITDB_ROOT_USERNAME}", "${MONGO_INITDB_ROOT_PASSWORD}", "${MONGO_HOST}", "${MONGO_PORT}", "${DUMP_DIR}"]
+    depends_on:
+    - mongodb
 
 volumes:
   mongo-data:
