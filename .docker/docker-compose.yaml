@@ -9,7 +9,7 @@ services:
     environment:
     - dbconnection=mongodb://mongodb:27017
     depends_on:
-    - mongodb
+    - mongo-populator
 
   frontend:
     image: frontend-app:latest
