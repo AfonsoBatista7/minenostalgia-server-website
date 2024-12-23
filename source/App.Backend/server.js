@@ -16,12 +16,26 @@ app.use(express.json());
 // MongoDB Connection
 mongoose.set('strictQuery', false);
 
-mongoose.connect(process.env.MONGODB_TOKEN)
-.then(()=>{
-    console.log('\nConnected to the database :D!');
-}).catch((error) => {
-    console.log(error);
-});
+// Function to connect to MongoDB with retry logic
+const connectWithRetry = (retries = 5, delay = 3000) => {
+    mongoose.connect(process.env.MONGODB_TOKEN)
+        .then(() => {
+            console.log('\nConnected to the database :D!');
+            // Optionally, you can start your application services here
+        })
+        .catch((error) => {
+            console.error('Error connecting to the database:', error);
+            if (retries > 0) {
+                console.log(`Retrying in ${delay / 1000} seconds...`);
+                setTimeout(() => connectWithRetry(retries - 1, delay), delay);
+            } else {
+                console.log('Failed to connect to the database after multiple attempts.');
+                process.exit(1); // Optionally exit if you cannot connect
+            }
+        });
+};
+
+connectWithRetry();
 
 // Endpoint to get player stats by name
 app.get('/stats/:name', async (req, res) => {
