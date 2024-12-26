@@ -12,6 +12,7 @@
 
 source/MongoDB/mongo-data/
 .docker/heimdall-config/
+.docker/grafana_data/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
