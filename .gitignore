@@ -11,6 +11,7 @@
 *.sln.docstates
 
 source/MongoDB/mongo-data/
+.docker/heimdall-config/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
