@@ -14,22 +14,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/gafda/example-repo">
-    <img src="./docs/images/logo.png" alt="Logo" width="80" height="80">
+    <img src="./source/App.Frontend/public/favicon.ico" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">example-repo</h3>
+  <h3 align="center">MineNostalgia Server Website</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/gafda/example-repo"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/gafda/example-repo">View Demo</a>
-    ·
-    <a href="https://github.com/gafda/example-repo/issues/new?labels=bug&template=bug-report.md">Report Bug</a>
-    ·
-    <a href="https://github.com/gafda/example-repo/issues/new?labels=enhancement&template=feature-request.md">Request Feature</a>
+    A Website for my minecraft server. Frontend, backend and mongoDb database running on Docker Containers.
   </p>
 </div>
 
