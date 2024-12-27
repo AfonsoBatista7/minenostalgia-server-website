@@ -53,9 +53,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot, may be ani-gif][product-screenshot]](https://example.com)
+[![Product Name Screen Shot, may be ani-gif][product-screenshot]]()
 
-This project is designed to provide a comprehensive solution for [briefly describe the purpose of the project]. It aims to [mention the main goals or objectives of the project].
+This project is designed to provide a simple solution for showing player statistics on a Minecraft server through a website. It aims to create an easy-to-use platform where players can see their stats and achievements. A custom plugin collects data from the server and saves it in a MongoDB database. By displaying this information on the website, the project helps keep players engaged and builds a competitive community.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -251,7 +251,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [stars-shield]: https://img.shields.io/github/stars/gafda/example-repo.svg?style=for-the-badge
 [stars-url]: https://github.com/gafda/example-repo/stargazers
 <!-- From repo images -->
-[product-screenshot]: ./docs/images/screenshot.png
+[product-screenshot]: ./docs/images/product.png
 <!-- From badges -->
 [bootstrap-shield]: https://img.shields.io/badge/Bootstrap-5.3-blue?style=for-the-badge&logo=bootstrap&logoColor=white
 [bootstrap-url]: https://getbootstrap.com
