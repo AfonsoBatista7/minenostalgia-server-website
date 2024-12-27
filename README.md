@@ -61,12 +61,12 @@ This project is designed to provide a simple solution for showing player statist
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+This section lists the major frameworks and libraries used to bootstrap the project. Additional add-ons or plugins will be mentioned in the acknowledgements section. Here are the main technologies utilized:
 
-* [![dotNetCore][dotnetcore-shield]][dotnetcore-url]
-* [![Bootstrap][bootstrap-shield]][bootstrap-url]
-* [![Docker][docker-shield]][docker-url]
-* [![Kubernetes][kubernetes-shield]][kubernetes-url]
+[![Docker][docker-shield]][docker-url]
+[![React][react-shield]][react-url]
+[![MongoDB][mongodb-shield]][mongodb-url]
+[![Node.js][nodejs-shield]][nodejs-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
