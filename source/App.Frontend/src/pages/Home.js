@@ -1,6 +1,6 @@
 import style from "./home.module.css";
 import ServerStats from "../components/stats/ServerStats";
-import PlayerSmallStats from "../components/stats/PlayerSmallStats";
+import ServerPlayers from "../components/stats/ServerPlayers";
 
 const Home = () => {
   return (
@@ -18,7 +18,7 @@ const Home = () => {
       </div>
 
       <ServerStats/>
-      <PlayerSmallStats/>
+      <ServerPlayers/>
     </>
   );
 }
