@@ -253,11 +253,11 @@ Use this space to list resources you find helpful and would like to give credit 
 <!-- From repo images -->
 [product-screenshot]: ./docs/images/product.png
 <!-- From badges -->
-[bootstrap-shield]: https://img.shields.io/badge/Bootstrap-5.3-blue?style=for-the-badge&logo=bootstrap&logoColor=white
-[bootstrap-url]: https://getbootstrap.com
+[nodejs-shield]: https://img.shields.io/badge/NodeJs-18.16.0-blue?style=for-the-badge&logo=nodejs&logoColor=white
+[nodejs-url]: https://nodejs.org/en
 [docker-shield]: https://img.shields.io/badge/Docker-24.0+-2496ED?style=for-the-badge&logo=docker&logoColor=white
 [docker-url]: https://www.docker.com
-[dotnetcore-shield]: https://img.shields.io/badge/.NET_Core-8.0-blueviolet?style=for-the-badge&logo=.net&logoColor=white
-[dotnetcore-url]: https://dotnet.microsoft.com
-[kubernetes-shield]: https://img.shields.io/badge/Kubernetes-1.31+-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white
-[kubernetes-url]: https://kubernetes.io
+[mongodb-shield]: https://img.shields.io/badge/MongoDB-8.8.1-blueviolet?style=for-the-badge&logo=mongodb&logoColor=white
+[mongodb-url]: https://www.mongodb.com/
+[react-shield]: https://img.shields.io/badge/React-18.3.1+-326CE5?style=for-the-badge&logo=react&logoColor=white
+[react-url]: https://react.dev
