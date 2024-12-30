@@ -70,25 +70,6 @@ This section lists the major frameworks and libraries used to bootstrap the proj
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Features
-
-This section should list the features that have been implemented and those that are planned for the future. Use the following format:
-
-- [x] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-  - [ ] Sub-feature 3.1
-  - [x] Sub-feature 3.2
-  - [ ] Sub-feature 3.3
-- [ ] Feature 4
-  - [ ] Sub-feature 4.1
-    - [ ] Sub-sub-feature 4.1.1
-
-**Legend:**
-
-- [x] - Completed
-- [ ] - In Progress
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -97,76 +78,34 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Hardware:
-* 40 TOP NPU
-* nVidia RTX20+
-* 4GB VRAM+
-* CPU Cores 4x+
-* ...
-
 Software:
-* DotNet Core 8.0
-* DirectX v12.1
-* TensorFlow 2.0
-* ...
-
-Extra:
-* Internet access
-* ...
+* Docker
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
     ```sh
-    git clone https://github.com/github_username/repo_name.git
-    cd repo_name
+    git clone https://github.com/AfonsoBatista7/minenostalgia-server-website
+    cd minenostalgia-server-website
     ```
-3. Install libraries
+2. Go to scripts folder and chose the operating system you're using
     ```sh
-    dotnet restore
+    cd .\scripts\docker\
     ```
-4. Enter your API in `app.settings`
-    ```json
-    API_KEY: "ENTER YOUR API"
-    ```
-5. Build the project
+    if **windows**
     ```sh
-    dotnet build
+    cd windows
     ```
-6. Run the project
+    if **linux**
     ```sh
-    dotnet run
+    cd linux
     ```
-7. Open your browser and navigate to `http://localhost:5000`
+3. Run the Project 
+    ```sh
+    .\up.bat
+    ```
+7. Open your browser and navigate to `http://localhost:80`
 8. Enjoy!
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-For development documentation, please refer to the [Documentation](;/docs/DEVELOPMENT.md)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add stuff needed (2024)
-- [ ] Add more stuff needed
-- [ ] Change to include wishful thinking
-- [ ] Add\Include Multi-language Support
-    - [ ] Japanese
-    - [ ] Swahili
-    - [ ] Korean
-
-See the [open issues](https://github.com/gafda/example-repo/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -199,8 +138,8 @@ c. (bug) - for bug fixes: `git checkout -b fix-my-awesome-fix`
 
 ### Top contributors:
 
-<a href="https://github.com/gafda/example-repo/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=gafda/example-repo" alt="contrib.rocks image" />
+<a href="https://github.com/AfonsoBatista7/minenostalgia-server-website/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AfonsoBatista7/minenostalgia-server-website" alt="contrib.rocks image" />
 </a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -215,25 +154,9 @@ Distributed under the GPL-3 License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_email](mailto://email@example.com)
+Email - [afonsobatista13@gmail.com](mailto://afonsobatista13@gmail.com)
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [Font Awesome](https://fontawesome.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [GitHub Pages](https://pages.github.com)
-* [Img Shields](https://shields.io)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+Project Link: [https://github.com/AfonsoBatista7/minenostalgia-server-website](https://github.com/AfonsoBatista7/minenostalgia-server-website)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
