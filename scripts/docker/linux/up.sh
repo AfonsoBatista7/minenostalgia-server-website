@@ -9,4 +9,4 @@ if [ "$#" -gt 0 ]; then
     done
 fi
 
-docker compose $profiles -f ./.docker/docker-compose.yaml up -d --build
+docker compose $profiles -f ../../../.docker/docker-compose.yaml up -d --build
