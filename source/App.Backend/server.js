@@ -16,9 +16,11 @@ app.use(express.json());
 // MongoDB Connection
 mongoose.set('strictQuery', false);
 
+const mongoToken = `mongodb://${process.env.MONGO_INITDB_ROOT_USERNAME}:${process.env.MONGO_INITDB_ROOT_PASSWORD}@${process.env.MONGO_HOST}:${process.env.MONGO_PORT}/DiscordBot?retryWrites=true&w=majority`
+
 // Function to connect to MongoDB with retry logic
 const connectWithRetry = (retries = 5, delay = 3000) => {
-    mongoose.connect(process.env.MONGODB_TOKEN)
+    mongoose.connect(mongoToken)
         .then(() => {
             console.log('\nConnected to the database :D!');
             // Optionally, you can start your application services here
