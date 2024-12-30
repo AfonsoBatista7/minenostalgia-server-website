@@ -88,7 +88,32 @@ Software:
     git clone https://github.com/AfonsoBatista7/minenostalgia-server-website
     cd minenostalgia-server-website
     ```
-2. Go to scripts folder and chose the operating system you're using
+
+2. Create a .env file
+    ```sh
+    cd .\.docker
+    touch .env
+    ```
+
+3. Edit .env file
+    - Use your favorite text editor to write on the .env file
+        ```txt
+        #Mongo Populator
+        MONGO_INITDB_ROOT_USERNAME=<username>
+        MONGO_INITDB_ROOT_PASSWORD=<password>
+        MONGO_HOST=mongodb           
+        MONGO_PORT=27017
+        DUMP_DIR="./dump"
+
+        #Grafana Auth
+        GF_SECURITY_ADMIN_USER=<username>
+        GF_SECURITY_ADMIN_PASSWORD=<password>
+        #Backend
+        MINECRAFT_SERVER_IP=mn.mobren.net
+        ```
+    - Save it.
+
+5. Go to scripts folder and chose the operating system you're using
     ```sh
     cd .\scripts\docker\
     ```
@@ -100,12 +125,16 @@ Software:
     ```sh
     cd linux
     ```
-3. Run the Project 
+
+6. Start Docker
+    Using your operating system search engine search for Docker and open it.
+
+7. Run the Project 
     ```sh
     .\up.bat
     ```
-7. Open your browser and navigate to `http://localhost:80`
-8. Enjoy!
+9. Open your browser and navigate to `http://localhost:80`
+10. Enjoy!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
