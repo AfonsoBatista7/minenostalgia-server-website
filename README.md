@@ -14,22 +14,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/gafda/example-repo">
-    <img src="./docs/images/logo.png" alt="Logo" width="80" height="80">
+    <img src="./source/App.Frontend/public/favicon.ico" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">example-repo</h3>
+  <h3 align="center">MineNostalgia Server Website</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/gafda/example-repo"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/gafda/example-repo">View Demo</a>
-    ·
-    <a href="https://github.com/gafda/example-repo/issues/new?labels=bug&template=bug-report.md">Report Bug</a>
-    ·
-    <a href="https://github.com/gafda/example-repo/issues/new?labels=enhancement&template=feature-request.md">Request Feature</a>
+    A Website for my minecraft server. Frontend, backend and mongoDb database running on Docker Containers.
   </p>
 </div>
 
@@ -62,41 +53,22 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot, may be ani-gif][product-screenshot]](https://example.com)
+[![Product Name Screen Shot, may be ani-gif][product-screenshot]]()
 
-This project is designed to provide a comprehensive solution for [briefly describe the purpose of the project]. It aims to [mention the main goals or objectives of the project].
+This project is designed to provide a simple solution for showing player statistics on a Minecraft server through a website. It aims to create an easy-to-use platform where players can see their stats and achievements. A custom plugin collects data from the server and saves it in a MongoDB database. By displaying this information on the website, the project helps keep players engaged and builds a competitive community.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+This section lists the major frameworks and libraries used to bootstrap the project. Additional add-ons or plugins will be mentioned in the acknowledgements section. Here are the main technologies utilized:
 
-* [![dotNetCore][dotnetcore-shield]][dotnetcore-url]
-* [![Bootstrap][bootstrap-shield]][bootstrap-url]
-* [![Docker][docker-shield]][docker-url]
-* [![Kubernetes][kubernetes-shield]][kubernetes-url]
+[![Docker][docker-shield]][docker-url]
+[![React][react-shield]][react-url]
+[![MongoDB][mongodb-shield]][mongodb-url]
+[![Node.js][nodejs-shield]][nodejs-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Features
-
-This section should list the features that have been implemented and those that are planned for the future. Use the following format:
-
-- [x] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-  - [ ] Sub-feature 3.1
-  - [x] Sub-feature 3.2
-  - [ ] Sub-feature 3.3
-- [ ] Feature 4
-  - [ ] Sub-feature 4.1
-    - [ ] Sub-sub-feature 4.1.1
-
-**Legend:**
-
-- [x] - Completed
-- [ ] - In Progress
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -106,76 +78,34 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Hardware:
-* 40 TOP NPU
-* nVidia RTX20+
-* 4GB VRAM+
-* CPU Cores 4x+
-* ...
-
 Software:
-* DotNet Core 8.0
-* DirectX v12.1
-* TensorFlow 2.0
-* ...
-
-Extra:
-* Internet access
-* ...
+* Docker
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
     ```sh
-    git clone https://github.com/github_username/repo_name.git
-    cd repo_name
+    git clone https://github.com/AfonsoBatista7/minenostalgia-server-website
+    cd minenostalgia-server-website
     ```
-3. Install libraries
+2. Go to scripts folder and chose the operating system you're using
     ```sh
-    dotnet restore
+    cd .\scripts\docker\
     ```
-4. Enter your API in `app.settings`
-    ```json
-    API_KEY: "ENTER YOUR API"
-    ```
-5. Build the project
+    if **windows**
     ```sh
-    dotnet build
+    cd windows
     ```
-6. Run the project
+    if **linux**
     ```sh
-    dotnet run
+    cd linux
     ```
-7. Open your browser and navigate to `http://localhost:5000`
+3. Run the Project 
+    ```sh
+    .\up.bat
+    ```
+7. Open your browser and navigate to `http://localhost:80`
 8. Enjoy!
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-For development documentation, please refer to the [Documentation](;/docs/DEVELOPMENT.md)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add stuff needed (2024)
-- [ ] Add more stuff needed
-- [ ] Change to include wishful thinking
-- [ ] Add\Include Multi-language Support
-    - [ ] Japanese
-    - [ ] Swahili
-    - [ ] Korean
-
-See the [open issues](https://github.com/gafda/example-repo/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -208,8 +138,8 @@ c. (bug) - for bug fixes: `git checkout -b fix-my-awesome-fix`
 
 ### Top contributors:
 
-<a href="https://github.com/gafda/example-repo/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=gafda/example-repo" alt="contrib.rocks image" />
+<a href="https://github.com/AfonsoBatista7/minenostalgia-server-website/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AfonsoBatista7/minenostalgia-server-website" alt="contrib.rocks image" />
 </a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -224,25 +154,9 @@ Distributed under the GPL-3 License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_email](mailto://email@example.com)
+Email - [afonsobatista13@gmail.com](mailto://afonsobatista13@gmail.com)
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [Font Awesome](https://fontawesome.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [GitHub Pages](https://pages.github.com)
-* [Img Shields](https://shields.io)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+Project Link: [https://github.com/AfonsoBatista7/minenostalgia-server-website](https://github.com/AfonsoBatista7/minenostalgia-server-website)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -260,13 +174,13 @@ Use this space to list resources you find helpful and would like to give credit 
 [stars-shield]: https://img.shields.io/github/stars/gafda/example-repo.svg?style=for-the-badge
 [stars-url]: https://github.com/gafda/example-repo/stargazers
 <!-- From repo images -->
-[product-screenshot]: ./docs/images/screenshot.png
+[product-screenshot]: ./docs/images/product.png
 <!-- From badges -->
-[bootstrap-shield]: https://img.shields.io/badge/Bootstrap-5.3-blue?style=for-the-badge&logo=bootstrap&logoColor=white
-[bootstrap-url]: https://getbootstrap.com
+[nodejs-shield]: https://img.shields.io/badge/NodeJs-18.16.0-blue?style=for-the-badge&logo=nodejs&logoColor=white
+[nodejs-url]: https://nodejs.org/en
 [docker-shield]: https://img.shields.io/badge/Docker-24.0+-2496ED?style=for-the-badge&logo=docker&logoColor=white
 [docker-url]: https://www.docker.com
-[dotnetcore-shield]: https://img.shields.io/badge/.NET_Core-8.0-blueviolet?style=for-the-badge&logo=.net&logoColor=white
-[dotnetcore-url]: https://dotnet.microsoft.com
-[kubernetes-shield]: https://img.shields.io/badge/Kubernetes-1.31+-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white
-[kubernetes-url]: https://kubernetes.io
+[mongodb-shield]: https://img.shields.io/badge/MongoDB-8.8.1-blueviolet?style=for-the-badge&logo=mongodb&logoColor=white
+[mongodb-url]: https://www.mongodb.com/
+[react-shield]: https://img.shields.io/badge/React-18.3.1+-326CE5?style=for-the-badge&logo=react&logoColor=white
+[react-url]: https://react.dev
