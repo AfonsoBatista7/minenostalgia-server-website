@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import PlayerListStats from "./PlayerListStats";
 
 const PlayerStats = () => {
 
@@ -54,37 +54,8 @@ const PlayerStats = () => {
 
       return (
         <div>
-            <h2>Online Players:</h2>
-            {
-                onlinePlayers.length > 0 ? (
-                    onlinePlayers.map((player,index) => (
-                        <Link to={`/stats/${player.name}`} key={index} style={{ textDecoration: 'none', color: 'inherit' }}>
-                            <div key={index} style={{ marginBottom: '10px' }}>
-                              <strong>{player.name}</strong> 
-                              {player.online ? '🟢' : '🔴'}
-                            </div>
-                        </Link>
-                    ))) : (
-                        <p>No online players.</p>
-                    )
-            }
-
-            <h2>Offline Players:</h2>
-            {
-                offlinePlayers.length > 0 ? (
-                    offlinePlayers.map((player,index) => (
-
-                        <Link to={`/stats/${player.name}`} key={index} style={{ textDecoration: 'none', color: 'inherit' }}>
-                            <div key={index} style={{ marginBottom: '10px' }}>
-                              <strong>{player.name}</strong> 
-                              {player.online ? '🟢' : '🔴'}
-                              <p> Last seen... {player.lastLogin} </p>
-                            </div>
-                        </Link>
-                    ))) : (
-                        <p>No offlinePlayers players.</p>
-                    )
-            }
+            <PlayerListStats online='Online' players ={onlinePlayers}/>
+            <PlayerListStats online='Offline' players ={offlinePlayers}/>
         </div>
       );
     };
